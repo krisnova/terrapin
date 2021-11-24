@@ -1,0 +1,9 @@
+/*
+ * debug is used to debug various CSS elements
+ */
+.debug {
+  background-color: #ffe6e6;
+  color: black;
+}
+
+

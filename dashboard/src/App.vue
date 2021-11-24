@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-     <img src="./assets/logo.png">
+  <div id="site"class="debug">
+     <h3>Components</h3>
      <ul>
        <li><router-link to="/" exact>Home</router-link></li>
        <li><router-link to="/topics">Topics</router-link></li>
@@ -12,10 +12,8 @@
 </template>
 
 <style>
-  body {
-    font-family: Helvetica, sans-serif;
-  }
-  .router-link-active{
-    color: red ;
-  }
+
+
+
 </style>
+

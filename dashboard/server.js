@@ -18,9 +18,8 @@ const html = (() => {
   const template = fs.readFileSync(resolve('./index.html'), 'utf-8')
   const i = template.indexOf('{{ APP }}')
   // styles are injected dynamically via vue-style-loader in development
-  const style = isProd ? '<link rel="stylesheet" href="/dist/styles.css">' : ''
   return {
-    head: template.slice(0, i).replace('{{ STYLE }}', style),
+    head: template.slice(0, i),
     tail: template.slice(i + '{{ APP }}'.length)
   }
 })()
@@ -51,6 +50,7 @@ const serve = (path, cache) => express.static(resolve(path), {
 
 app.use(compression({ threshold: 0 }))
 app.use(favicon('./src/assets/logo.png'))
+app.use('/styles.css', serve('./styles.css'))
 app.use('/service-worker.js', serve('./dist/service-worker.js'))
 app.use('/manifest.json', serve('./manifest.json'))
 app.use('/dist', serve('./dist'))
