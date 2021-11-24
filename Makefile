@@ -13,14 +13,9 @@
 # limitations under the License.
 all: help
 
-dashboard: dashboard-build dashboard-run ## Will build and run the code in /dashboard on localhost
+dashboard: ## Will run a dev server and watch local changes
 	@echo "Building..."
-
-dashboard-build: ## Will only build the code (this is a necessary JavaScript thing)
-	cd dashboard && npm run build
-
-dashboard-run: ## Will only run whatever code is in /dashboard on localhost
-	cd dashboard && npm start
+	cd dashboard && npm run dev
 
 .PHONY: help
 help:  ## Show help messages for make targets
