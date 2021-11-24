@@ -6,4 +6,90 @@
   color: black;
 }
 
+:root {
+  --fontSize: 1.0rem;
+  --background: #ffffff;
+  --background-content: #fafafa;
+  --background-header: #747474;
+  --color: #d0d0d0;
+  --color-secondary: #b9b9b9;
+  --color-highlight: #b19cff;
+  --border-color: #b19cff;
+}
+
+/*
+ * Terrapin is the <body> of the app
+ */
+.Terrapin {
+  background-color: var(--background);
+}
+
+/*
+ * Terrapin-app is the div for the nav, content, and etc
+ */
+.Terrapin-app {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+ * Terrapin-nav is the top menu bar
+ */
+.Terrapin-nav {
+  background-color: var(--color);
+  order: -1;
+}
+
+/*
+ * Terrapin-content is the main central section of the app
+ */
+.Terrapin-content {
+  background-color: var(--background-content);
+  border: var(--color-highlight) 1px solid;
+ }
+
+/*
+ * Terrapin-etc is the right side misc div, usually used for things like ads
+ */
+.Terrapin-etc {
+  padding-left: 10px;
+}
+
+.Terrapin-header {
+  height: 25px;
+  background-color: var(--background-header);
+}
+
+.header-left {
+
+}
+
+.header-center {
+
+}
+
+.header-right {
+  float: right;
+}
+
+.nav-item {
+  background-color: var(--color-secondary);
+  flex: 0 0 220px;
+  height: 25px;
+}
+
+@media (min-width: 768px) {
+  .Terrapin-app {
+    flex-direction: row;
+    flex: 1;
+  }
+  .Terrapin-content {
+    flex: 1;
+  }
+  .Terrapin-nav, .Terrapin-etc {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+  }
+}
+
 

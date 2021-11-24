@@ -1,20 +1,34 @@
 <template>
-  <div id="site">
-     <h3>Components</h3>
-     <ul>
-       <li><router-link to="/" exact>Home</router-link></li>
-       <li><router-link to="/topics">Topics</router-link></li>
-       <li><router-link to="/summary">Summary</router-link></li>
-       <li><router-link to="/counter">Counter</router-link></li>
-       <li><router-link to="/about">About</router-link></li>
-     </ul>
-     <router-view class="view"></router-view>
+
+  <body class="Terrapin">
+  <header class="Terrapin-header">
+    <div>
+      <!-- Header Left -->
+      <span class="header-left">Left</span>
+
+      <!-- Header Center -->
+      <span class="header-center">Center</span>
+
+      <!-- Header Right -->
+      <span class="header-right">Right</span>
+    </div>
+  </header>
+  <div class="Terrapin-app">
+    <main class="Terrapin-content">
+        <router-view></router-view>
+    </main>
+    <nav class="Terrapin-nav">
+      <div class="nav-item"><router-link to="/" exact>Home</router-link></div>
+      <div class="nav-item"><router-link to="/summary">Summary</router-link></div>
+    </nav>
   </div>
+  <footer>
+    <p>
+      Footer
+    </p>
+  </footer>
+  </body>
 </template>
 
-<style>
-
-
-
-</style>
-
+<script>
+</script>

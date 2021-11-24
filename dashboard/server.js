@@ -17,7 +17,6 @@ const app = express()
 const html = (() => {
   const template = fs.readFileSync(resolve('./index.html'), 'utf-8')
   const i = template.indexOf('{{ APP }}')
-  // styles are injected dynamically via vue-style-loader in development
   return {
     head: template.slice(0, i),
     tail: template.slice(i + '{{ APP }}'.length)
