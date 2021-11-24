@@ -13,6 +13,7 @@
 # limitations under the License.
 all: help
 
+.PHONY: dashboard
 dashboard: ## Will run a dev server and watch local changes
 	@echo "Building..."
 	cd dashboard && npm run dev
